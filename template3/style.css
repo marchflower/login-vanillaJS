@@ -21,7 +21,7 @@ h3 {
 #form {
     position: relative;
 }
-#form #email {
+#form #email, #pwd {
     width: 300px;
     background: #292929;
     outline: none;
@@ -31,7 +31,7 @@ h3 {
     color: #fff;
     font-style: 18px;
 }
-#form .inputBox {
+#form .inputEmail, .inputPwd {
     position: relative;
 }
 
@@ -43,7 +43,7 @@ h3 {
     padding: 5px;
 }
 
-#form.invalid .inputBox::before{
+#form .inputEmail.invalid ::before{
     content: '';
     position: absolute;
     right: 12px;
@@ -55,7 +55,31 @@ h3 {
     z-index: 1000;
 }
 
-#form.valid .inputBox::before{
+#form .inputEmail.valid ::before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    background: url("images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+}
+
+#form .inputPwd.invalid .inputPwd::before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    background: url("images/invalid.png");
+    background-size: cover;
+    z-index: 1000;
+}
+
+#form .inputPwd.valid .inputPwd::before{
     content: '';
     position: absolute;
     right: 12px;

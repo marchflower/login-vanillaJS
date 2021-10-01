@@ -4,48 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Sign In & Up</title>
+    <link rel="favicon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <div>
-        <h3>Email Validation Check</h3>
-        <form id="form" action="#">
-            <div class="inputBox">
-                <input type="email" name="" id="email" placeholder="Enter Email Address" onkeydown="validation()">
-                <!-- <span id="text"></span> -->
+    <div class="container" id="login">
+        <form class="form">
+            <h2 class="title">Login</h2>
+            <div class="inputField invalid">
+                <i class="headIcon fas fa-envelope"></i>
+                <input type="email" class="input valid" id="email" placeholder="Email">
+                <i class="tailIcon fas"></i>
             </div>
+            <div class="inputField">
+                <i class="headIcon fas fa-lock"></i>
+                <input type="password" class="input" id="password" placeholder="Password">
+                <i class="tailIcon fas"></i>
+            </div>
+            <input type="submit" class="btn solid" value="Submit" />
+            <p class="linkText">
+                <a href="#" class="link" id="linkForgot">Forgot your password?</a>
+            </p>
+            <p class="linkText">
+                <a href="#" class="link" id="linkCreateAccount">Don't have an account?<br>Create a account</a>
+            </p>
         </form>
     </div>
-    <script type="text/javascript">
-        function validation()
-        {
-            var form = document.querySelector("#form");
-            var email = form.querySelector("#email").value;
-            // var text = form.querySelector("#text");
-            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-            if (email.match(pattern)){
-                form.classList.add("valid");
-                form.classList.remove("invalid");
-                // text.innerHTML = "Your Email Address in Valid.";
-                // text.style.color = "#00ff00";
-            }
-            else {
-                form.classList.remove("valid");
-                form.classList.add("invalid");
-                // text.innerHTML = "Please Enter Valid Email Address.";
-                // text.style.color = "#ff0000";
-            }
-
-            if (email == ""){
-                form.classList.remove("valid");
-                form.classList.remove("invalid");
-                // text.innerHTML = "";
-                // text.style.color = "#000000";
-            }
-        }
-    </script>    
+    <div class="container hidden" id="createAccount">
+        <form class="form">
+            <h2 class="title">Create Account</h2>
+            <div class="inputField">
+                <i class="headIcon fas fa-envelope"></i>
+                <input type="email" class="input" id="email" placeholder="Email">
+                <i class="tailIcon fas"></i>
+            </div>
+            <div class="inputField">
+                <i class="headIcon fas fa-user"></i>
+                <input type="text" class="input" id="nickname" placeholder="Nickname">
+                <i class="tailIcon fas"></i>
+            </div>
+            <div class="inputField">
+                <i class="headIcon fas fa-lock"></i>
+                <input type="password" class="input" id="password" placeholder="Password">
+                <i class="tailIcon fas"></i>
+            </div>
+            <div class="inputField">
+                <i class="headIcon fas fa-check"></i>
+                <input type="password" class="input" id="password-confirm" placeholder="Password Confirm">
+                <i class="tailIcon fas"></i>
+            </div>
+            <input type="submit" class="btn solid" value="Submit" />
+            <p class="linkText">
+                <a href="#" class="link" id=linkLogin>Already have an account?<br>Sing in</a>
+            </p>
+        </form>
+    </div>
+    <script src="./login/switch.js"></script>
 </body>
 </html>
