@@ -6,7 +6,7 @@
 
 body {
     --color-primary: #00377cff;
-    --color-primary-dark: rgb(0, 34, 75);
+    --color-primary-dark: rgb(0, 28, 63);
     --color-secondary: #0066b2ff;
     --color-error: #cc3333;
     --color-success: #00abccff;
@@ -116,6 +116,10 @@ body {
     background: var(--color-primary-dark);
 }
 
+.form .btn:focus {
+    background: var(--color-primary-dark);
+}
+
 .form .btn:active {
     transform: scale(0.98);
 }
@@ -132,4 +136,12 @@ body {
 
 .form .link:hover {
     text-decoration: underline;
+}
+
+.fa-exclamation-triangle {
+    color:rgb(200, 0, 0);
+}
+
+.fa-check-circle {
+    color:green;
 }

@@ -7,20 +7,20 @@
     <title>Sign In & Up</title>
     <link rel="favicon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./login/style.css">
 </head>
 <body>
     <div class="container" id="login">
         <form class="form">
             <h2 class="title">Login</h2>
-            <div class="inputField invalid">
+            <div class="inputField email">
                 <i class="headIcon fas fa-envelope"></i>
-                <input type="email" class="input valid" id="email" placeholder="Email">
+                <input type="email" class="input" placeholder="Email">
                 <i class="tailIcon fas"></i>
             </div>
-            <div class="inputField">
+            <div class="inputField password">
                 <i class="headIcon fas fa-lock"></i>
-                <input type="password" class="input" id="password" placeholder="Password">
+                <input type="password" class="input" placeholder="Password">
                 <i class="tailIcon fas"></i>
             </div>
             <input type="submit" class="btn solid" value="Submit" />
@@ -35,24 +35,24 @@
     <div class="container hidden" id="createAccount">
         <form class="form">
             <h2 class="title">Create Account</h2>
-            <div class="inputField">
+            <div class="inputField email">
                 <i class="headIcon fas fa-envelope"></i>
-                <input type="email" class="input" id="email" placeholder="Email">
+                <input type="email" class="input" placeholder="Email">
                 <i class="tailIcon fas"></i>
             </div>
-            <div class="inputField">
+            <div class="inputField username">
                 <i class="headIcon fas fa-user"></i>
-                <input type="text" class="input" id="nickname" placeholder="Nickname">
+                <input type="text" class="input" placeholder="Username">
                 <i class="tailIcon fas"></i>
             </div>
-            <div class="inputField">
+            <div class="inputField password">
                 <i class="headIcon fas fa-lock"></i>
-                <input type="password" class="input" id="password" placeholder="Password">
+                <input type="password" class="input" placeholder="Password">
                 <i class="tailIcon fas"></i>
             </div>
-            <div class="inputField">
+            <div class="inputField password-confirm">
                 <i class="headIcon fas fa-check"></i>
-                <input type="password" class="input" id="password-confirm" placeholder="Password Confirm">
+                <input type="password" class="input" placeholder="Password Confirm">
                 <i class="tailIcon fas"></i>
             </div>
             <input type="submit" class="btn solid" value="Submit" />
@@ -61,6 +61,11 @@
             </p>
         </form>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./login/dom.js"></script>
+    <script src="./login/userauth.js"></script>
     <script src="./login/switch.js"></script>
+    <script src="./login/signin.js"></script>
+    <script src="./login/signup.js"></script>
 </body>
 </html>
